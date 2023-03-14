@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import DemoComponent from "./Components/DemoComponent";
+import FormComponent from "./Components/FormComponent";
+import TableComponent from "./Components/TableComponent";
+import './styles/App.css'
+import { useState, useEffect } from 'react' 
+
 
 function App() {
+  const [dataList, setDataList] = useState([])
+  const [EditIdx, setEditIdx] = useState(-1)
+  useEffect(() => {
+   
+  }, [dataList])
+
+  console.log(EditIdx)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DemoComponent/>
+      <FormComponent setDataList={setDataList} dataList={dataList} EditIdx={EditIdx}
+      setEditIdx={setEditIdx}/>
+      <TableComponent setDataList={setDataList} dataList= {dataList} EditIdx={setEditIdx}/>
     </div>
   );
 }
 
 export default App;
+
+// component harus .jsx

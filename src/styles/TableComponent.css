@@ -1,0 +1,27 @@
+.form-table {
+    margin: 25px 0;
+    background-color: grey;
+    width: 600px;
+}
+
+.form-table tr {
+    background-color: white;
+}
+
+#edit-box {
+    display: flex;
+    justify-content: center;
+}
+
+.small-column {
+    width: 12%;
+}
+
+.big-column {
+    width: 22%;
+}
+
+.form-table td {
+    text-align: center;
+}
+
